@@ -1,43 +1,72 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b1f2e3e8-1d0f-40b9-ab91-701303e67e75" />Deployed Contract Address = ST3WS0T17AP8FMT7NXC6J6FWJH5X5QFPAVHBPY5N1.nft-tree
+# 🪙 Simple Token + NFT Counter
+
+Deployed Contract Address:
+ST3WS0T17AP8FMT7NXC6J6FWJH5X5QFPAVHBPY5N1.nft-tree
+
 explorer https://explorer.hiro.so/txid/0x30e613639e49045974c38006a1179ee1fda6e23b5ade093a7985bbf4c4b4fd56?chain=testnet
+Explorer: View on Hiro Explorer
+
+📜 Project Title & Short Description
+
+Simple Token + NFT Counter (Stacks / Clarity)
+
+A minimal smart contract designed to demonstrate fungible tokens (FTs), NFTs, and counters on the Stacks blockchain.
+This contract is perfect for learning, testing, demos, or as boilerplate for more advanced Clarity projects.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b1f2e3e8-1d0f-40b9-ab91-701303e67e75" />
 
 
-🪙 Simple Token + NFT Counter (Stacks / Clarity)
-📜 Overview
+🛠 Tech Stack Used
 
-This is a minimal Clarity smart contract designed to deploy easily on Stacks with Clarinet.
+Blockchain: Stacks
 
-It provides:
+Language: Clarity
 
-A basic fungible token (FT)
+Framework: Clarinet
 
-A basic non-fungible token (NFT)
+Explorer: Hiro Explorer
 
-A simple counter variable for testing
+⚙️ Setup Instructions
+Local (Clarinet)
+clarinet new nft-tree
+cd nft-tree
 
-Perfect for learning, demos, or boilerplate for bigger projects.
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce976810-679f-4b6b-b9bb-cf004874f800" />
+# Replace contract file
+clarinet check
+clarinet console
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/03465ada-d950-47f3-9e17-1e90c3f108a6" />
+Testnet/Mainnet
+
+Deploy using Stacks CLI or Clarinet.
+
+Verify deployment via Hiro Explorer
+.
+
+📦 Smart Contract Functions
+🔎 Read-Only Functions
+
+get-counter → Returns the current counter value (number of NFTs minted so far).
+
+✍️ Public Functions
+
+mint-tokens (amount uint) → Mints fungible tokens (FT) to the caller (tx-sender).
+
+mint-nft → Mints a new NFT with ID = current counter, then increments counter.
 
 ⭐ Features
 
-Fungible token minting (ft-mint?)
+✅ Fungible token minting via ft-mint?.
 
-NFT minting (nft-mint?) with incremental IDs
+✅ NFT minting via nft-mint? with incremental IDs.
 
-Read-only counter tracking number of NFTs minted
+✅ Counter that tracks total NFTs minted.
 
-Deploys without errors (compatible with clarinet check)
+✅ Lightweight and deploys cleanly (clarinet check compatible).
 
-📦 Contract Functions
-🔎 Read-Only
-Function	Description
-get-counter	Returns current counter value (number of NFTs minted so far)
-✍️ Public Calls
-Function	Description
-mint-tokens (amount uint)	Mints FT to tx-sender
-mint-nft	Mints a new NFT with ID = current counter, increments counter
+✅ Great starting point for experiments and tutorials.
+
 ⚠️ Error Handling
 
-This is a demo contract — no custom error codes are defined. If a mint operation fails, the built-in ft-mint? or nft-mint? will return (err ...).
+No custom error codes are defined.
+
+If a mint fails, the underlying ft-mint? or nft-mint? function will return an error (err ...).
