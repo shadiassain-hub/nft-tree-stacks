@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: nft-tree
+            expected-sender: ST3WS0T17AP8FMT7NXC6J6FWJH5X5QFPAVHBPY5N1
+            cost: 5220
+            path: contracts/nft-tree.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.1"
